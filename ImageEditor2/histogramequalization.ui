@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistogramEqualization</class>
+ <widget class="QDialog" name="HistogramEqualization">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>538</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="opaqueResize">
+      <bool>true</bool>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Histo.. OrigImage</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QCustomPlot" name="ImageGistogram" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="WorkImage">
+            <property name="text">
+             <string>OrigImage</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Histo.. ProcessedImage</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QCustomPlot" name="ProcessedImageGistogram" native="true"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="ProcessedImage">
+            <property name="text">
+             <string>ProcessedImage</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>1000000</height>
+       </size>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="4" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Маска</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="Mask00"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="Mask01"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="Mask02"/>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="Mask03"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLineEdit" name="Mask04"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="Mask10"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="Mask11"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLineEdit" name="Mask12"/>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="Mask13"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLineEdit" name="Mask14"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLineEdit" name="Mask20"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="Mask21"/>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLineEdit" name="Mask22"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="Mask23"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="QLineEdit" name="Mask24"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="Mask30"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="Mask31"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLineEdit" name="Mask32"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="Mask33"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLineEdit" name="Mask34"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="Mask40"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="Mask41"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLineEdit" name="Mask42"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="Mask43"/>
+          </item>
+          <item row="4" column="4">
+           <widget class="QLineEdit" name="Mask44"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="LegendHide">
+         <property name="text">
+          <string>HideLegend</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QComboBox" name="ColorComponent">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Красный</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Зеленый</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Синий</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QSlider" name="ParamSlider">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>240</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>240</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QPushButton" name="Reload">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Reload</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="SetCustomMasks">
+         <property name="minimumSize">
+          <size>
+           <width>240</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>240</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>SetCustomMasks</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="CompareProcAndOrig">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Сравнить с ориг</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="MixHisto">
+         <property name="text">
+          <string>MixHisto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QComboBox" name="EffectBox">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>25</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Эквализация</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Усредняющий фильтр</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Фильтр Гаусса</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Фильтр Лапласа</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Градиентный фильтр</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Медианный фильтр (3х3)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Медианный фильтр (Крест)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Адаптивный Медианный фильтр (3х3)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Адаптивный Медианный фильтр (Крест)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QPushButton" name="GetNormalImage">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>GetNormImage</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
